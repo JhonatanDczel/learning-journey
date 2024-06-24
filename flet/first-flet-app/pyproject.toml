@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "first-flet-app"
+version = "0.1.0"
+description = ""
+authors = ["JhonatanDczel <jariasq@unsa.edu.pe>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flet = "^0.23.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
