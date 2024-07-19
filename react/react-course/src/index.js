@@ -12,6 +12,6 @@ root.render(
   // Etiqueta especial fragment <></>: etiueta que contiene otras etiquetas sin ser una etiqueta en si misma
   // Proptypes para restringir el tipado
   <>
-    <TaskCard />
+    <TaskCard ready={true}/>
   </>
 );
