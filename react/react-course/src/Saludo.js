@@ -15,10 +15,8 @@ export function Saludo() {
     ln: "Arias",
   };
 
-  return <h1>Componente de react</h1>
-
   return (
-    <h1>{JSON.stringify(user) + " Programmer? : " + programmer.toString()}</h1>
+    <h1>Component <br></br> {JSON.stringify(user) + " Programmer? : " + programmer.toString()}</h1>
   );
 }
 
