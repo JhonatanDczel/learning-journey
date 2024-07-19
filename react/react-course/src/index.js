@@ -6,6 +6,7 @@ import Component from "./Component";
 import { TaskCard } from "./Task";
 import { Saluda } from "./Saluda";
 import { Button } from "./Button";
+import {Post} from './Posts';
 
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
@@ -17,5 +18,6 @@ root.render(
     <TaskCard ready={true}/>
     <Saluda/>
     <Button name="Hola"/>
+    <Post/>
   </>
 );
