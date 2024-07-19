@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 
-export function Button({text}){
-  return <button>
-    {text}
+export function Button({name}){
+  return <button onClick={function () {
+    alert("Hola mundo");
+  }}>
+    {name}
   </button>
 }
 

@@ -4,6 +4,8 @@ import { Saludo, UserCard } from "./Saludo";
 import Product, { Navbar } from "./Product";
 import Component from "./Component";
 import { TaskCard } from "./Task";
+import { Saluda } from "./Saluda";
+import { Button } from "./Button";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
@@ -13,5 +15,7 @@ root.render(
   // Proptypes para restringir el tipado
   <>
     <TaskCard ready={true}/>
+    <Saluda/>
+    <Button name="Hola"/>
   </>
 );
