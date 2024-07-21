@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-import Saluda from './Greeting'
+import Saludados from './Greeting'
+import {App} from "./Greeting"
+import TaskList from './Tasking'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Saluda />
+    <Saludados />
+    <TaskList />
   </React.StrictMode>,
 )
