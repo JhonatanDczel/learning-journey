@@ -31,3 +31,7 @@ class Project(models.Model):
   tecnology = models.CharField(max_length=200)
   createdAdd = models.DateTimeField(auto_now_add=True)
 ```
+
+## REST API
+
+Para saber mas, buscar en la documentacion
