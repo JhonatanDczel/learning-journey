@@ -11,3 +11,13 @@ Primero creamos un entorno virtual para aislar nuestro proyecto y sus paquetes, 
 Instalamos con pip: `Django` y `Django REST Framework`
 
 Iniciamos el proyecto con django `django admin startproject name .`
+
+> Deberemos cambiar de version de django (no usar la 4.1), por un pequeño bug de django rest framework
+
+### CRUD APP
+
+Iniciamos una nueva app para crear el crud, y lo registramos en `settings.py`, registramos tambien `rest_framework`
+
+### Creando los modelos
+
+Crearemos un modelo de proyecto para crear las tablas y hacer nuestra API a partir de aqui
