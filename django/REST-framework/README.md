@@ -21,3 +21,13 @@ Iniciamos una nueva app para crear el crud, y lo registramos en `settings.py`, r
 ### Creando los modelos
 
 Crearemos un modelo de proyecto para crear las tablas y hacer nuestra API a partir de aqui
+
+Creamos los modelos (clases) de python: 
+
+```python
+class Project(models.Model):
+  title = models.CharField(max_length=200)
+  description = models.TextField()
+  tecnology = models.CharField(max_length=200)
+  createdAdd = models.DateTimeField(auto_now_add=True)
+```
