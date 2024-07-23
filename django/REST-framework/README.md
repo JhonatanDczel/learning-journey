@@ -35,3 +35,6 @@ class Project(models.Model):
 ## REST API
 
 Para saber mas, buscar en la documentacion
+
+- Primero creamos el serializador
+- Luego creamos el viewSet
