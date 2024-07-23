@@ -12,50 +12,53 @@ Django es un framework de desarrollo web para Python, aqui abarcaremos las bases
 
 Los entornos virtuales de python nos permiten tener multiples proyectos con dependencias distintas sin que estas causen conflictos entre si.
 
-En arch: 
- ```
- # Para instalar virtualenv:
- sudo pacman -S python-virtualenv
- ```
- ```
- # Para crear un entorno virtual en el directorio actual: 
- virtualenv venv
- ```
+En arch:
 
+```python
+# Para instalar virtualenv:
+sudo pacman -S python-virtualenv
+```
+
+```python
+# Para crear un entorno virtual en el directorio actual:
+virtualenv venv
+```
 
 ## Instalando Django
 
- **Con el entorno virtual creado y activado:**
- ```
- pip install django
- ```
+**Con el entorno virtual creado y activado:**
+
+```python
+pip install django
+```
 
 ## Crar un proyecto con Django
 
-Para crear un nuevo proyecto: 
+Para crear un nuevo proyecto:
 
- ```
- django-admin startproject mysite
- ```
-
- No usar palabras reservadas como python django o test
-
- Esto crea un proyecto con un manage.py dentro de una carpeta, para crearlo en la carpeta actual: 
-
- ```
- django-admin startproject mysite .
- ```
-
-Podemos correr el proyecto con: 
-
+```python
+django-admin startproject mysite
 ```
+
+No usar palabras reservadas como python django o test
+
+Esto crea un proyecto con un manage.py dentro de una carpeta, para crearlo en la carpeta actual:
+
+```python
+django-admin startproject mysite .
+```
+
+Podemos correr el proyecto con:
+
+```python
 python manage.py runserver
 ```
+
 Esto crea un db.sqlite3 nuevo que es la BD por defecto de Django
 
-El servidor arrancara por defecto en el puerto 8000, para arrancarlo en otro puerto: 
+El servidor arrancara por defecto en el puerto 8000, para arrancarlo en otro puerto:
 
-```
+```python
 python manage.py runserver 3000
 ```
 
@@ -69,16 +72,15 @@ db.sqlite3 es la base de datos que se usa con Django normalmente para desarrollo
 
 El archivo mas importante es settings.py que tendra distintos parametros que cambiaremos para desarrollar nuestras aplicaciones.
 
-El archivo url.py nos ayuda a manejar las direcciones internas del sitio. 
+El archivo url.py nos ayuda a manejar las direcciones internas del sitio.
 
-Tanto asgi.py y wsgi.py no estan implicados en el desarrollo sino en la ejecución en producción para servir el contenido fuera de Django. 
+Tanto asgi.py y wsgi.py no estan implicados en el desarrollo sino en la ejecución en producción para servir el contenido fuera de Django.
 
 ## Aplicaciones en Django
 
 Dentro de un proyecto de Django existen las **Aplicaciones** que son secciones que interactuan entre si para dar funcionalidad completa al proyecto.
 
-Para crear las aplicaciones usamos `startapp`: 
-
+Para crear las aplicaciones usamos `startapp`:
 
 ```bash
 python manage.py startapp blog
@@ -88,11 +90,11 @@ Para acoplar estas aplicaciones, lo hacemos desde `/mysite`
 
 ### Estructura de una app
 
-El archivo principal es `views.py`, ahi se define que es lo que se envia al cliente para que lo vea en pantalla (html). 
+El archivo principal es `views.py`, ahi se define que es lo que se envia al cliente para que lo vea en pantalla (html).
 
 Hay una carpeta `/migrations` que se llenará cuando usemos la base de datos mediante el ORM
 
-El archivo `admin.py` nos permitirá acceder a un panel de administrador para crear datos, usuarios, roles y actualizar contenido. 
+El archivo `admin.py` nos permitirá acceder a un panel de administrador para crear datos, usuarios, roles y actualizar contenido.
 
 El archivo `apps.py` es para configurar la aplicacion, similar al `settings.py`.
 
@@ -104,7 +106,8 @@ El archivo `tests.py` es para hacer pruebas de lógica en nuestro sitio.
 
 Lo haremos en el archivo `views.py` de `/myapp`
 
-Dentro escribimos la funcion: 
+Dentro escribimos la funcion:
+
 ```python
 def hello(request):
   return HttpResponse("Hello, Django!")
@@ -123,7 +126,7 @@ urlpatterns = [
 
 Para que las aplicaciones manejen sus propias url en lugar de ponerlas todas en `urls.py` crearemos este archivo pero de forma local dentro de `/myapp`.
 
-Ahí agregamos nuestras url: 
+Ahí agregamos nuestras url:
 
 ```python
 from django.urls import path
@@ -147,34 +150,36 @@ urlpatterns = [
 
 ### Data Models
 
-Para hacer las migraciones: 
-```
+Para hacer las migraciones:
+
+```python
 python manage.py makemigrations
 python manage.py migrate
 ```
+
 Los modelos son codigo de python que se transforma en tablas de sql.
 
 Cada modelo representa una tabla, y sus atributos son campos de la tabla
 
 ### Django shell
 
-Para ejecutar una shell interactiva en nuestro proyecto con Django: 
+Para ejecutar una shell interactiva en nuestro proyecto con Django:
 
-```
+```python
 python manage.py shell
 ```
 
-Dentro podemos interacgtuar con nuestra base de datos de la siguiente manera: 
+Dentro podemos interacgtuar con nuestra base de datos de la siguiente manera:
 
-```
+```python
 >> p = Project(name="Aplication movil")
 ```
 
 Eso crea una instancia que se agregará a la tabla Project usando: `p.save()`
 
-Project (o cualquier modelo) tiene atributos y funciones estáticas para poder trabajar con nuestra base de datos: 
+Project (o cualquier modelo) tiene atributos y funciones estáticas para poder trabajar con nuestra base de datos:
 
-```
+```python
 Project.objects.all()
 # Te muestra todos los datos de la tabla Project
 ```
@@ -185,13 +190,13 @@ Esto devolverá el dato contenido en la tabla correspondiente
 
 ## Params
 
-Los params los usamos para recibir datos del cliente, se especifican en la url que capta el middleware: 
+Los params los usamos para recibir datos del cliente, se especifican en la url que capta el middleware:
 
 ```python
     path('hello/<str:username>', views.hello)
 ```
 
-Posteriormente podemos trabajar con este parámetro desde la view: 
+Posteriormente podemos trabajar con este parámetro desde la view:
 
 ```python
 def hello(request, username):
@@ -201,13 +206,13 @@ def hello(request, username):
 
 ## Django Admin
 
-Es un recurso muy valioso de Django que se accede mediante `admin/`, para crear un super usuario lo puedes hacer de la siguiente manera: 
+Es un recurso muy valioso de Django que se accede mediante `admin/`, para crear un super usuario lo puedes hacer de la siguiente manera:
 
 ```python
 python manage.py createsuperuser
 ```
 
-Luego desde `myapp` > `admin.py` exportamos los modelos que queremos usar: 
+Luego desde `myapp` > `admin.py` exportamos los modelos que queremos usar:
 
 ```python
 from django.contrib import admin
@@ -218,15 +223,17 @@ admin.site.register(Project)
 admin.site.register(Task)
 ```
 
-Para hacer que los nombres de los datos de las tablas se muestren, debemos sobreescribir la funcion `__str__` que python pone por defecto para parsear un objeto a String: 
+Para hacer que los nombres de los datos de las tablas se muestren, debemos sobreescribir la funcion `__str__` que python pone por defecto para parsear un objeto a String:
 
 Para Project:
+
 ```python
   def __str__(self):
     return self.name
 ```
 
 Para Task:
+
 ```python
   def __str__(self):
     return self.title + " - " + self.project.name
@@ -234,7 +241,7 @@ Para Task:
 
 ## Render
 
-Forma parte del modulo shortcuts, y nos sirve para renderizar un fragmento de html como respuesta: 
+Forma parte del modulo shortcuts, y nos sirve para renderizar un fragmento de html como respuesta:
 
 ```python
 def index(request):
@@ -245,7 +252,7 @@ Esto buscará en la carpeta `templates`.
 
 ## Jinja Templates
 
-Se pueden pasar parametros a los templates asi: 
+Se pueden pasar parametros a los templates asi:
 
 ```python
 def index(request):
@@ -253,7 +260,7 @@ def index(request):
   return render(request, 'index.html', {'title': title})
 ```
 
-Y en el template se usan de la siguiente manera: 
+Y en el template se usan de la siguiente manera:
 
 ```python
 <h1>{{ title }}</h1>
@@ -265,10 +272,10 @@ Se pueden hacer bucles for usando los `{% for x in y %}` y `{% endfor %}`
 
 ### Condicionales
 
-Los condicionales de hacen de la siguiente manera: 
+Los condicionales de hacen de la siguiente manera:
 
 ```jinja
-    <h1>{% if task.done == False %}⏳{% else %}✅{% endif %}{{task.title}}</h1>
+    <h1>{% if task.done == False %}(wait){% else %}(check){% endif %}{{task.title}}</h1>
 ```
 
 Para mejores referencias visitar la documentación de Jinja
@@ -281,7 +288,7 @@ Para hacer herencia de templates usamos la palabra reservada `extends`:
 {% extends 'base.html' %}
 ```
 
-Y podemos inyectar fragmentos de html con: 
+Y podemos inyectar fragmentos de html con:
 
 ```html
 {% block content %}
@@ -293,7 +300,7 @@ Y podemos inyectar fragmentos de html con:
 
 Los formularios se pueden manejar en Django gracias al modulo forms.
 
-Para esto se crean clases que seran nuestros objetos formulario: 
+Para esto se crean clases que seran nuestros objetos formulario:
 
 ```python
 from django import forms
@@ -305,15 +312,14 @@ class CreateNewTask(forms.Form):
   description = forms.CharField(widget=forms.Textarea, label="Descripcion de tarea", required=True)
 ```
 
-Esto se le pasa como variable a una template, y se usa de la siguiente manera: 
+Esto se le pasa como variable a una template, y se usa de la siguiente manera:
 
 ```html
 {% extends 'base.html' %} {% block content %}
 
 <h1>Create a new task</h1>
 <form method="POST">
-  {% csrf_token %}
-  {{ form.as_p }}
+  {% csrf_token %} {{ form.as_p }}
   <button>save</button>
 </form>
 
@@ -322,7 +328,7 @@ Esto se le pasa como variable a una template, y se usa de la siguiente manera:
 
 Note que se esta usando la etiqueta `{% csrf_token %}` de Jinja, esto es para asegurarnos de que la información que llegará al servidor está siendo enviada desde un formulario propio de nosotros.
 
-Podemos acceder a los datos de la query string de la siguiente manera: 
+Podemos acceder a los datos de la query string de la siguiente manera:
 
 ```python
 def create_task(request):
@@ -331,9 +337,10 @@ def create_task(request):
   Task.objects.create(title=request.POST['title'], description=request.POST['description'], project_id=1)
   return redirect('/tasks')
 ```
+
 ## URL names
 
-En la funcion path de `urls.py` podemos pasar un 3er parametro que hace referencia al nombre del recurso, esto nos sirve para manejar las direcciones url de forma independiente sin que cause conflicto el cambio de alguna: 
+En la funcion path de `urls.py` podemos pasar un 3er parametro que hace referencia al nombre del recurso, esto nos sirve para manejar las direcciones url de forma independiente sin que cause conflicto el cambio de alguna:
 
 ```python
 urlpatterns = [
@@ -347,27 +354,28 @@ urlpatterns = [
 ]
 ```
 
-Luego, en los html templates podemos usar el siguiente tag: 
+Luego, en los html templates podemos usar el siguiente tag:
 
 ```html
-  <ul>
-    <li><a href="{% url 'index' %}">Home</a></li>
-    <li><a href="{% url 'tasks' %}">Tasks</a></li>
-    <li><a href="{% url 'projects' %}">Projects</a></li>
-    <li><a href="{% url 'about' %}">About</a></li>
-    <li><a href="{% url 'create_project' %}">Create Project</a></li>
-    <li><a href="{% url 'create_task' %}">Create Task</a></li>
-  </ul>
+<ul>
+  <li><a href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'tasks' %}">Tasks</a></li>
+  <li><a href="{% url 'projects' %}">Projects</a></li>
+  <li><a href="{% url 'about' %}">About</a></li>
+  <li><a href="{% url 'create_project' %}">Create Project</a></li>
+  <li><a href="{% url 'create_task' %}">Create Task</a></li>
+</ul>
 ```
 
 ## Static Files
 
 Los archivos estaticos son las imagenes, css y scripts que no necesitan ser procesados por el servidor, estos se cargan dentro de la carpeta `static` que puede ser modificada desde `settings.py`.
 
-Para usarlos se tienen los siguientes tag templates: 
+Para usarlos se tienen los siguientes tag templates:
 
 ```html
 {% load static %}
 <img src="{% static 'images/profile.jpg' %}" alt="Django logo" width="80" />
 ```
+
 Es necesario poner la etiqueta de `load static` ya que sin eso las imagenes no se cargan
