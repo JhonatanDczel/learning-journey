@@ -33,3 +33,5 @@ No olvidar usar el import:
 ```js
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 ```
+
+Cuando entramos a una ruta no establecida se manda a una template pagina 404, podemos personalizar esta vista 
