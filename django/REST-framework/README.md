@@ -36,5 +36,39 @@ class Project(models.Model):
 
 Para saber mas, buscar en la documentacion
 
-- Primero creamos el serializador
-- Luego creamos el viewSet
+- Primero creamos el serializador en `app/serializers.py`
+- Luego creamos el viewSet en `app/api.py`
+
+### Router
+
+Para poder acceder a la api, debemos crear las url necesarias, django rest framwork hace el trabajo por nosotros con la funcion routers (que devuelve una lista de urls django):
+
+```python
+router = routers.DefaultRouter()
+
+router.register('api/projects', ProjectViewSet, 'projects')
+
+# Router crea los urls para get put post y demas
+urlpatterns = router.urls
+```
+
+Luego registramos los url en el archivo original del proyecto:
+
+```python
+urlpatterns = [
+    # Opcional: usar el django admin
+    path('admin/', admin.site.urls),
+    # Importante: importar include from django.urls
+    path('', include('projects.urls'))
+]
+```
+
+Luego de esto nuestra api deberia estar lista para funcionar, solo debemos correr el servidor
+
+### Consumiendo la API
+
+Podemos usar extensiones de vscode especializadas en consumo de APIS (Como Postmaaaan <3).
+
+Importante: quiza haya un error al intentar acceder como: `api/project` y se soluciona poniendo un slash al final xd `api/project/`
+
+## Desplegando en `render.com`
