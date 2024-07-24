@@ -59,3 +59,21 @@ children: [
 ```
 
 Luego, en nuestro componente padre podremos usar la equeta `<Outlet/>` para indicar donde queremos que se ponga el componente hijo
+
+## Error basico
+
+Asi se ve la pagina de error basico:
+
+```jsx
+import { useRouteError } from "react-router-dom";
+
+export default function Error() {
+  const error = useRouteError();
+  return (
+    <div>
+      <h1>Error</h1>
+      <p>Error {error.statusText || error.message}</p>
+    </div>
+  );
+}
+```
