@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       // Expecificar rutas adicionales
       {
         // Para ver cada contacto individualmente
-        path: "contacts/:contactid",
+        path: "contacts/:contactId",
         element: <Contact />
       },
     ],
