@@ -4,7 +4,7 @@
 
 Primero creamos un entorno virtual para aislar nuestro proyecto y sus paquetes, con `virtualenv`.
 
-> **Pro tip vscode:
+> **Pro tip vscode**:
 > usar el selector de interprete de python
 > Asi cada terminal estará cargada correctamente
 
@@ -22,7 +22,7 @@ Iniciamos una nueva app para crear el crud, y lo registramos en `settings.py`, r
 
 Crearemos un modelo de proyecto para crear las tablas y hacer nuestra API a partir de aqui
 
-Creamos los modelos (clases) de python: 
+Creamos los modelos (clases) de python:
 
 ```python
 class Project(models.Model):
@@ -37,7 +37,40 @@ class Project(models.Model):
 Para saber mas, buscar en la documentacion
 
 - Primero creamos el serializador en `app/serializers.py`
+
+### Serializers
+
+Los serializers son los que transforman nuestros datos de django para poder ser servidos por nuestra API
+
+Se crea una clase que sera el serializador
+
+```python
+class ProjectSerializer(serializers.ModelSerializer):
+  class Meta():
+    model = Project
+    fields = ('id', 'title', 'description', 'created_at')
+    read_only_fields = ['created_at']
+```
+
 - Luego creamos el viewSet en `app/api.py`
+
+### Viewset
+
+Es el que se encarga de definir como van a poder ser accedidos los datos
+
+```python
+from .models import Project
+from rest_framework import viewsets, permissions
+from .serializers import ProjectSerializer
+
+class ProjectViewSet(viewsets.ModelViewSet):
+  # Que datos servirá la api
+  queryset = Project.objects.all()
+  # Quinenes van a poder llamar a la api
+  permission_classes = [permissions.AllowAny]
+  # Cómo obtendremos los datos
+  serializer_class = ProjectSerializer
+```
 
 ### Router
 

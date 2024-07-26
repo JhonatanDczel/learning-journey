@@ -77,3 +77,23 @@ export default function Error() {
   );
 }
 ```
+
+podemos forzar el lanzamiento de errores con `throw new Error('message')`
+
+## Uso de params
+
+Tambien tenemos a nuestra disposicion un hook llamado params, que nos devuelve un objeto con las params:
+
+```js
+const params = useParams();
+
+// con esto podemos acceder a los datos de la url:
+
+params.contactId;
+```
+
+**_Podemos usar useMemo para traer los datos_**
+
+```js
+const contact = useMemo(() => getContact(params.contactId), [params.contactId]);
+```
