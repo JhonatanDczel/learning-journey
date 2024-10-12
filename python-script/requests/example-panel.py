@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import requests
 import os
 import json
+import subprocess
 
 load_dotenv()
 
@@ -13,4 +14,5 @@ r_json = r.json()
 
 with open("data.json", "w") as file:
     json.dump(r_json, file, indent=2)
-    print("Datos guardados correctamente")
+    print("Datos guardados correctamente ✨✨✨\n")
+    subprocess.run(["ls"])
