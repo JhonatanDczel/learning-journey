@@ -1,4 +1,5 @@
 import requests
+import time
 
 while True:
     print("=============================")
@@ -11,6 +12,6 @@ while True:
 
     r = requests.get(url)
     data = r.json()
+    time.sleep(1)
 
-    print("======= DATOS =======")
-    print(data["remittent"]["name"])
+    print(data["remittent"]["id"], data["remittent"]["name"], sep="|")
