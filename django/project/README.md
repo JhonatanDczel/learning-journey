@@ -1,6 +1,7 @@
 # Aprendiendo Django
 
-Django es un framework de desarrollo web para Python, aqui abarcaremos las bases para crear proyectos usando Django
+Django es un framework de desarrollo web para Python, aqui abarcaremos las
+bases para crear proyectos usando Django
 
 ## Programas necesarios
 
@@ -10,7 +11,8 @@ Django es un framework de desarrollo web para Python, aqui abarcaremos las bases
 
 ## Virtual Env
 
-Los entornos virtuales de python nos permiten tener multiples proyectos con dependencias distintas sin que estas causen conflictos entre si.
+Los entornos virtuales de python nos permiten tener multiples proyectos con
+dependencias distintas sin que estas causen conflictos entre si.
 
 En arch:
 
