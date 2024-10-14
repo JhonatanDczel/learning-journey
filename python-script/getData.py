@@ -14,4 +14,4 @@ while True:
     data = r.json()
     time.sleep(1)
 
-    print(data["remittent"]["id"], data["remittent"]["name"], sep="|")
+    print(data["remittent"]["id"], data["remittent"]["name"], sep=" | ")

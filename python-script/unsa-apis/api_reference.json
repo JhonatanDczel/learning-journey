@@ -1,0 +1,3688 @@
+{
+  "url": "https://apps.unsa.edu.pe/sisadmision/public",
+  "port": null,
+  "defaults": {},
+  "routes": {
+    "debugbar.openhandler": {
+      "uri": "_debugbar/open",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "debugbar.clockwork": {
+      "uri": "_debugbar/clockwork/{id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "debugbar.assets.css": {
+      "uri": "_debugbar/assets/stylesheets",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "debugbar.assets.js": {
+      "uri": "_debugbar/assets/javascript",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "debugbar.cache.delete": {
+      "uri": "_debugbar/cache/{key}/{tags?}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "saml.logout": {
+      "uri": "saml2/{uuid}/logout",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "saml.login": {
+      "uri": "saml2/{uuid}/login",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "saml.metadata": {
+      "uri": "saml2/{uuid}/metadata",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "saml.acs": {
+      "uri": "saml2/{uuid}/acs",
+      "methods": [
+        "POST"
+      ]
+    },
+    "saml.sls": {
+      "uri": "saml2/{uuid}/sls",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "ignition.healthCheck": {
+      "uri": "_ignition/health-check",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "ignition.executeSolution": {
+      "uri": "_ignition/execute-solution",
+      "methods": [
+        "POST"
+      ]
+    },
+    "ignition.shareReport": {
+      "uri": "_ignition/share-report",
+      "methods": [
+        "POST"
+      ]
+    },
+    "ignition.scripts": {
+      "uri": "_ignition/scripts/{script}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "ignition.styles": {
+      "uri": "_ignition/styles/{style}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "login": {
+      "uri": "login",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "logout": {
+      "uri": "logout",
+      "methods": [
+        "POST"
+      ]
+    },
+    "password.request": {
+      "uri": "forgot-password",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "password.reset": {
+      "uri": "reset-password/{token}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "password.email": {
+      "uri": "forgot-password",
+      "methods": [
+        "POST"
+      ]
+    },
+    "password.update": {
+      "uri": "reset-password",
+      "methods": [
+        "POST"
+      ]
+    },
+    "register": {
+      "uri": "register",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "verification.notice": {
+      "uri": "email/verify",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "verification.verify": {
+      "uri": "email/verify/{id}/{hash}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "verification.send": {
+      "uri": "email/verification-notification",
+      "methods": [
+        "POST"
+      ]
+    },
+    "user-profile-information.update": {
+      "uri": "user/profile-information",
+      "methods": [
+        "PUT"
+      ]
+    },
+    "user-password.update": {
+      "uri": "user/password",
+      "methods": [
+        "PUT"
+      ]
+    },
+    "password.confirm": {
+      "uri": "user/confirm-password",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "password.confirmation": {
+      "uri": "user/confirmed-password-status",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "profile.show": {
+      "uri": "user/profile",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "other-browser-sessions.destroy": {
+      "uri": "user/other-browser-sessions",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "current-user-photo.destroy": {
+      "uri": "user/profile-photo",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "current-user.destroy": {
+      "uri": "user",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "ubigeos.paises": {
+      "uri": "api/ubigeos/paises",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "ubigeos.departamentos": {
+      "uri": "api/ubigeos/departamentos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "ubigeos.provincias": {
+      "uri": "api/ubigeos/{dpto}/provincias",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "ubigeos.distritos": {
+      "uri": "api/ubigeos/{prov}/distritos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "colegios.": {
+      "uri": "api/colegios/colegio/{cod}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "proceso_fases.": {
+      "uri": "api/proceso_fases/{aula}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "aula": "id"
+      }
+    },
+    "tipo_docs.": {
+      "uri": "api/tipo_docs/{tipo_doc_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "escuelas.": {
+      "uri": "api/escuelas/universidades-no-licenciadas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "inscripciones.total-preinscritos": {
+      "uri": "api/inscripciones/{proceso_fase_id}/total-preinscritos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "datos.": {
+      "uri": "api/datos/consulta-apis-peru/{dni}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "documentos.": {
+      "uri": "api/documentos/show/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "persona.find_if_exists": {
+      "uri": "api/persona/exists/{docu_tipo_id}/{ndoc}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "tickets.actualizar_pago": {
+      "uri": "tickets/actualizar_pago/{id}",
+      "methods": [
+        "POST"
+      ]
+    },
+    "contacto": {
+      "uri": "contacto",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "nuevo_form": {
+      "uri": "nuevo_form",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "presentar_externo": {
+      "uri": "presentar_externo",
+      "methods": [
+        "POST"
+      ]
+    },
+    "subir_deudas": {
+      "uri": "subir_deudas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "verificar_externo": {
+      "uri": "verificar_externo",
+      "methods": [
+        "POST"
+      ]
+    },
+    "dashboard": {
+      "uri": "dashboard",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.login": {
+      "uri": "acceso-admin",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "fases": {
+      "uri": "fases",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "observacion": {
+      "uri": "observacion",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.exoneracion_por_dni": {
+      "uri": "validar/exoneracion_por_dni",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.escuelas_por_dni": {
+      "uri": "validar/escuelas_por_dni",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.escuelas_por_apn_fecha_nac": {
+      "uri": "validar/escuelas_por_apn_fecha_nac",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.escuelas_por_codigo_especialidad": {
+      "uri": "validar/escuelas_por_codigo_especialidad",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.ingresantes_por_proceso": {
+      "uri": "validar/ingresantes_por_proceso",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.validacion_extraordinario": {
+      "uri": "validar/validacion_extraordinario",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "validar.ingreso_misma_escuela": {
+      "uri": "validar/ingreso_misma_escuela",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "modalidades": {
+      "uri": "modalidades",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "preinscripciones.completar_datos": {
+      "uri": "preinscripciones/completar_datos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "preinscripciones.confirmar_datos": {
+      "uri": "preinscripciones/confirmar_datos/{proceso_fase_id}/{tipo_extraordinario_id?}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "preinscripciones.dirigir": {
+      "uri": "preinscripciones/dirigir",
+      "methods": [
+        "POST"
+      ]
+    },
+    "preinscripciones.formulario": {
+      "uri": "preinscripciones/formulario/{proceso_fase_id}/{tipo_extraordinario_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "preinscripciones.preinscribir": {
+      "uri": "preinscripciones/preinscribir",
+      "methods": [
+        "POST"
+      ]
+    },
+    "preinscripciones.actualizar": {
+      "uri": "preinscripciones/actualizar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "preinscripciones.seguimiento.index": {
+      "uri": "preinscripciones/seguimiento",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "preinscripciones.seguimiento.mostrar": {
+      "uri": "preinscripciones/seguimiento_ver/{inscripcion_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "preinscripciones.generarpdf": {
+      "uri": "preinscripciones/generarpdf/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "preinscripciones.generarpdffinal": {
+      "uri": "preinscripciones/generarpdffinal/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "preinscripciones.generarpdfcarnet": {
+      "uri": "preinscripciones/generarpdfcarnet/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "preinscripciones.matricula": {
+      "uri": "preinscripciones/matricula",
+      "methods": [
+        "POST"
+      ]
+    },
+    "preinscripciones.cambiar_carrera": {
+      "uri": "preinscripciones/cambiar_carrera",
+      "methods": [
+        "POST"
+      ]
+    },
+    "preinscripciones.seguimiento.observaciones": {
+      "uri": "preinscripciones/observaciones",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "postulantes.create": {
+      "uri": "postulantes/create",
+      "methods": [
+        "POST"
+      ]
+    },
+    "postulantes.confirmar": {
+      "uri": "postulantes/confirmar/{postulante}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "postulante": "id"
+      }
+    },
+    "postulantes.update": {
+      "uri": "postulantes/{postulante}/update",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "postulante": "id"
+      }
+    },
+    "postulantes.consultar_deudas": {
+      "uri": "postulantes/consultar_deudas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "postulantes.subir_deudas": {
+      "uri": "postulantes/subir_deudas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "postulantes.consultar_postulaciones": {
+      "uri": "postulantes/consultar_postulaciones",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "postulantes.consultar_carrera": {
+      "uri": "postulantes/consultar_carrera/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "files.upload_photo": {
+      "uri": "files/upload-photo",
+      "methods": [
+        "POST"
+      ]
+    },
+    "files.upload_document": {
+      "uri": "files/upload-document",
+      "methods": [
+        "POST"
+      ]
+    },
+    "files.load": {
+      "uri": "files/load/{archivo_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "files.load_dufa": {
+      "uri": "files/load_dufa/{inscripcion_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.dashboard": {
+      "uri": "admin/dashboard",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.dashboard_especializado": {
+      "uri": "admin/dashboard_especializado",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.repartir": {
+      "uri": "admin/repartir",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.correcionfotos.index": {
+      "uri": "admin/correciones/correcionfotos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.operadores.restore": {
+      "uri": "admin/operadores/{operador}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.operadores.index": {
+      "uri": "admin/operadores",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.operadores.create": {
+      "uri": "admin/operadores/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.operadores.store": {
+      "uri": "admin/operadores",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.operadores.show": {
+      "uri": "admin/operadores/{operador}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "operador": "id"
+      }
+    },
+    "admin.operadores.edit": {
+      "uri": "admin/operadores/{operador}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.operadores.update": {
+      "uri": "admin/operadores/{operador}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "operador": "id"
+      }
+    },
+    "admin.operadores.destroy": {
+      "uri": "admin/operadores/{operador}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "operador": "id"
+      }
+    },
+    "admin.colegios.restore": {
+      "uri": "admin/colegios/{colegio}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.colegios.index": {
+      "uri": "admin/colegios",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.colegios.create": {
+      "uri": "admin/colegios/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.colegios.store": {
+      "uri": "admin/colegios",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.colegios.show": {
+      "uri": "admin/colegios/{colegio}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "colegio": "id"
+      }
+    },
+    "admin.colegios.edit": {
+      "uri": "admin/colegios/{colegio}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.colegios.update": {
+      "uri": "admin/colegios/{colegio}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "colegio": "id"
+      }
+    },
+    "admin.colegios.destroy": {
+      "uri": "admin/colegios/{colegio}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "colegio": "id"
+      }
+    },
+    "admin.detalle": {
+      "uri": "admin/detalle/{operador}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "operador": "id"
+      }
+    },
+    "admin.universidades.restore": {
+      "uri": "admin/universidades/{universidad}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.universidades.index": {
+      "uri": "admin/universidades",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.universidades.create": {
+      "uri": "admin/universidades/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.universidades.store": {
+      "uri": "admin/universidades",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.universidades.show": {
+      "uri": "admin/universidades/{universidad}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "universidad": "id"
+      }
+    },
+    "admin.universidades.edit": {
+      "uri": "admin/universidades/{universidad}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.universidades.update": {
+      "uri": "admin/universidades/{universidad}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "universidad": "id"
+      }
+    },
+    "admin.universidades.destroy": {
+      "uri": "admin/universidades/{universidad}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "universidad": "id"
+      }
+    },
+    "admin.escuelas.index": {
+      "uri": "admin/escuelas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.escuelas.create": {
+      "uri": "admin/escuelas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.escuelas.store": {
+      "uri": "admin/escuelas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.escuelas.show": {
+      "uri": "admin/escuelas/{escuela}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.escuelas.edit": {
+      "uri": "admin/escuelas/{escuela}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.escuelas.update": {
+      "uri": "admin/escuelas/{escuela}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ]
+    },
+    "admin.escuelas.destroy": {
+      "uri": "admin/escuelas/{escuela}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "admin.especialidades.index": {
+      "uri": "admin/especialidades",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.especialidades.create": {
+      "uri": "admin/especialidades/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.especialidades.store": {
+      "uri": "admin/especialidades",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.especialidades.show": {
+      "uri": "admin/especialidades/{especialidad}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.especialidades.edit": {
+      "uri": "admin/especialidades/{especialidad}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.especialidades.update": {
+      "uri": "admin/especialidades/{especialidad}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ]
+    },
+    "admin.especialidades.destroy": {
+      "uri": "admin/especialidades/{especialidad}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "admin.instrumentos.index": {
+      "uri": "admin/instrumentos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.instrumentos.create": {
+      "uri": "admin/instrumentos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.instrumentos.store": {
+      "uri": "admin/instrumentos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.instrumentos.show": {
+      "uri": "admin/instrumentos/{instrumento}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.instrumentos.edit": {
+      "uri": "admin/instrumentos/{instrumento}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.instrumentos.update": {
+      "uri": "admin/instrumentos/{instrumento}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ]
+    },
+    "admin.instrumentos.destroy": {
+      "uri": "admin/instrumentos/{instrumento}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "admin.usuarios.restore": {
+      "uri": "admin/usuarios/{usuario}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.usuarios.index": {
+      "uri": "admin/usuarios",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.usuarios.create": {
+      "uri": "admin/usuarios/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.usuarios.store": {
+      "uri": "admin/usuarios",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.usuarios.show": {
+      "uri": "admin/usuarios/{usuario}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "usuario": "id"
+      }
+    },
+    "admin.usuarios.edit": {
+      "uri": "admin/usuarios/{usuario}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "usuario": "id"
+      }
+    },
+    "admin.usuarios.update": {
+      "uri": "admin/usuarios/{usuario}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "usuario": "id"
+      }
+    },
+    "admin.usuarios.destroy": {
+      "uri": "admin/usuarios/{usuario}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "usuario": "id"
+      }
+    },
+    "admin.roles.restore": {
+      "uri": "admin/roles/{rol}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.roles.index": {
+      "uri": "admin/roles",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.roles.create": {
+      "uri": "admin/roles/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.roles.store": {
+      "uri": "admin/roles",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.roles.show": {
+      "uri": "admin/roles/{role}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "role": "id"
+      }
+    },
+    "admin.roles.edit": {
+      "uri": "admin/roles/{role}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.roles.update": {
+      "uri": "admin/roles/{role}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "role": "id"
+      }
+    },
+    "admin.roles.destroy": {
+      "uri": "admin/roles/{role}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "role": "id"
+      }
+    },
+    "admin.tipo_docs.restore": {
+      "uri": "admin/tipo_docs/{tipo_doc}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.tipo_docs.index": {
+      "uri": "admin/tipo_docs",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_docs.create": {
+      "uri": "admin/tipo_docs/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_docs.store": {
+      "uri": "admin/tipo_docs",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.tipo_docs.show": {
+      "uri": "admin/tipo_docs/{tipo_doc}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "tipo_doc": "id"
+      }
+    },
+    "admin.tipo_docs.edit": {
+      "uri": "admin/tipo_docs/{tipo_doc}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_docs.update": {
+      "uri": "admin/tipo_docs/{tipo_doc}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "tipo_doc": "id"
+      }
+    },
+    "admin.tipo_docs.destroy": {
+      "uri": "admin/tipo_docs/{tipo_doc}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "tipo_doc": "id"
+      }
+    },
+    "admin.procesos.restore": {
+      "uri": "admin/procesos/{proceso}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.procesos.index": {
+      "uri": "admin/procesos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.procesos.create": {
+      "uri": "admin/procesos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.procesos.store": {
+      "uri": "admin/procesos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.procesos.show": {
+      "uri": "admin/procesos/{proceso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso": "id"
+      }
+    },
+    "admin.procesos.edit": {
+      "uri": "admin/procesos/{proceso}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.procesos.update": {
+      "uri": "admin/procesos/{proceso}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "proceso": "id"
+      }
+    },
+    "admin.procesos.destroy": {
+      "uri": "admin/procesos/{proceso}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "proceso": "id"
+      }
+    },
+    "admin.fases.restore": {
+      "uri": "admin/fases/{fase}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.fases.index": {
+      "uri": "admin/fases",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.fases.create": {
+      "uri": "admin/fases/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.fases.store": {
+      "uri": "admin/fases",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.fases.show": {
+      "uri": "admin/fases/{fase}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "fase": "id"
+      }
+    },
+    "admin.fases.edit": {
+      "uri": "admin/fases/{fase}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.fases.update": {
+      "uri": "admin/fases/{fase}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "fase": "id"
+      }
+    },
+    "admin.fases.destroy": {
+      "uri": "admin/fases/{fase}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "fase": "id"
+      }
+    },
+    "admin.tipo_extraordinarios.restore": {
+      "uri": "admin/tipo_extraordinarios/{tipo_extraordinario}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.tipo_extraordinarios.index": {
+      "uri": "admin/tipo_extraordinarios",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_extraordinarios.create": {
+      "uri": "admin/tipo_extraordinarios/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_extraordinarios.store": {
+      "uri": "admin/tipo_extraordinarios",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.tipo_extraordinarios.show": {
+      "uri": "admin/tipo_extraordinarios/{tipo_extraordinario}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "tipo_extraordinario": "id"
+      }
+    },
+    "admin.tipo_extraordinarios.edit": {
+      "uri": "admin/tipo_extraordinarios/{tipo_extraordinario}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_extraordinarios.update": {
+      "uri": "admin/tipo_extraordinarios/{tipo_extraordinario}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "tipo_extraordinario": "id"
+      }
+    },
+    "admin.tipo_extraordinarios.destroy": {
+      "uri": "admin/tipo_extraordinarios/{tipo_extraordinario}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "tipo_extraordinario": "id"
+      }
+    },
+    "admin.documentacion_procesos.restore": {
+      "uri": "admin/documentacion_procesos/{documentacion_proceso}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.documentacion_procesos.index": {
+      "uri": "admin/documentacion_procesos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.documentacion_procesos.create": {
+      "uri": "admin/documentacion_procesos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.documentacion_procesos.store": {
+      "uri": "admin/documentacion_procesos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.documentacion_procesos.show": {
+      "uri": "admin/documentacion_procesos/{documentacion_proceso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "documentacion_proceso": "id"
+      }
+    },
+    "admin.documentacion_procesos.edit": {
+      "uri": "admin/documentacion_procesos/{documentacion_proceso}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.documentacion_procesos.update": {
+      "uri": "admin/documentacion_procesos/{documentacion_proceso}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "documentacion_proceso": "id"
+      }
+    },
+    "admin.documentacion_procesos.destroy": {
+      "uri": "admin/documentacion_procesos/{documentacion_proceso}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "documentacion_proceso": "id"
+      }
+    },
+    "admin.admision_escuelas.index": {
+      "uri": "admin/admision_escuelas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.admision_escuelas.create": {
+      "uri": "admin/admision_escuelas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.admision_escuelas.store": {
+      "uri": "admin/admision_escuelas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.admision_escuelas.show": {
+      "uri": "admin/admision_escuelas/{admision_escuela}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.admision_escuelas.edit": {
+      "uri": "admin/admision_escuelas/{admision_escuela}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.admision_escuelas.update": {
+      "uri": "admin/admision_escuelas/{admision_escuela}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "admision_escuela": "id"
+      }
+    },
+    "admin.admision_escuelas.destroy": {
+      "uri": "admin/admision_escuelas/{admision_escuela}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "admin.admision_escuelas.activar": {
+      "uri": "admin/admision_escuelas/{admision_escuela}/activar",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "admision_escuela": "id"
+      }
+    },
+    "admin.admision_escuelas.desactivar": {
+      "uri": "admin/admision_escuelas/{admision_escuela}/desactivar",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "admision_escuela": "id"
+      }
+    },
+    "admin.proceso_fases.restore": {
+      "uri": "admin/proceso_fases/{proceso_fase}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_fases.index": {
+      "uri": "admin/proceso_fases",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_fases.create": {
+      "uri": "admin/proceso_fases/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_fases.store": {
+      "uri": "admin/proceso_fases",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_fases.show": {
+      "uri": "admin/proceso_fases/{proceso_fase}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fases.edit": {
+      "uri": "admin/proceso_fases/{proceso_fase}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_fases.update": {
+      "uri": "admin/proceso_fases/{proceso_fase}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fases.destroy": {
+      "uri": "admin/proceso_fases/{proceso_fase}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fases.eliminar_pagos_suf": {
+      "uri": "admin/proceso_fases/eliminar_pagos_suf/{proceso_fase}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fases.eliminar_pagos_inscripciones": {
+      "uri": "admin/proceso_fases/eliminar_pagos_inscripciones/{proceso_fase}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fases.subir_deudas_ceprunsa": {
+      "uri": "admin/proceso_fases/subir_deudas_ceprunsa/{proceso_fase}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fases.eliminar_pagos_carrera": {
+      "uri": "admin/proceso_fases/eliminar_pagos_carrera/{proceso_fase}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "admin.proceso_fase_aulas.restore": {
+      "uri": "admin/proceso_fase_aulas/{proceso_fase_aula}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_fase_aulas.create_full": {
+      "uri": "admin/create_full",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_fase_aulas.reasignar": {
+      "uri": "admin/reasignar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_fase_aulas.index": {
+      "uri": "admin/proceso_fase_aulas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_fase_aulas.create": {
+      "uri": "admin/proceso_fase_aulas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_fase_aulas.store": {
+      "uri": "admin/proceso_fase_aulas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_fase_aulas.show": {
+      "uri": "admin/proceso_fase_aulas/{proceso_fase_aula}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase_aula": "id"
+      }
+    },
+    "admin.proceso_fase_aulas.edit": {
+      "uri": "admin/proceso_fase_aulas/{proceso_fase_aula}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_fase_aulas.update": {
+      "uri": "admin/proceso_fase_aulas/{proceso_fase_aula}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "proceso_fase_aula": "id"
+      }
+    },
+    "admin.proceso_fase_aulas.destroy": {
+      "uri": "admin/proceso_fase_aulas/{proceso_fase_aula}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "proceso_fase_aula": "id"
+      }
+    },
+    "admin.conceptos.restore": {
+      "uri": "admin/conceptos/{concepto}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.conceptos.index": {
+      "uri": "admin/conceptos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.conceptos.create": {
+      "uri": "admin/conceptos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.conceptos.store": {
+      "uri": "admin/conceptos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.conceptos.show": {
+      "uri": "admin/conceptos/{concepto}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "concepto": "id"
+      }
+    },
+    "admin.conceptos.edit": {
+      "uri": "admin/conceptos/{concepto}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.conceptos.update": {
+      "uri": "admin/conceptos/{concepto}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "concepto": "id"
+      }
+    },
+    "admin.conceptos.destroy": {
+      "uri": "admin/conceptos/{concepto}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "concepto": "id"
+      }
+    },
+    "admin.concepto_montos.restore": {
+      "uri": "admin/concepto_montos/{concepto_monto}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.concepto_montos.index": {
+      "uri": "admin/concepto_montos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.concepto_montos.create": {
+      "uri": "admin/concepto_montos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.concepto_montos.store": {
+      "uri": "admin/concepto_montos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.concepto_montos.show": {
+      "uri": "admin/concepto_montos/{concepto_monto}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "concepto_monto": "id"
+      }
+    },
+    "admin.concepto_montos.edit": {
+      "uri": "admin/concepto_montos/{concepto_monto}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.concepto_montos.update": {
+      "uri": "admin/concepto_montos/{concepto_monto}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "concepto_monto": "id"
+      }
+    },
+    "admin.concepto_montos.destroy": {
+      "uri": "admin/concepto_montos/{concepto_monto}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "concepto_monto": "id"
+      }
+    },
+    "admin.docu_tipos.restore": {
+      "uri": "admin/docu_tipos/{docu_tipo}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.docu_tipos.index": {
+      "uri": "admin/docu_tipos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.docu_tipos.create": {
+      "uri": "admin/docu_tipos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.docu_tipos.store": {
+      "uri": "admin/docu_tipos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.docu_tipos.show": {
+      "uri": "admin/docu_tipos/{docu_tipo}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "docu_tipo": "id"
+      }
+    },
+    "admin.docu_tipos.edit": {
+      "uri": "admin/docu_tipos/{docu_tipo}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.docu_tipos.update": {
+      "uri": "admin/docu_tipos/{docu_tipo}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "docu_tipo": "id"
+      }
+    },
+    "admin.docu_tipos.destroy": {
+      "uri": "admin/docu_tipos/{docu_tipo}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "docutipo": "id"
+      }
+    },
+    "admin.turnos.restore": {
+      "uri": "admin/turnos/{turno}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.turnos.index": {
+      "uri": "admin/turnos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.turnos.create": {
+      "uri": "admin/turnos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.turnos.store": {
+      "uri": "admin/turnos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.turnos.show": {
+      "uri": "admin/turnos/{turno}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "turno": "id"
+      }
+    },
+    "admin.turnos.edit": {
+      "uri": "admin/turnos/{turno}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.turnos.update": {
+      "uri": "admin/turnos/{turno}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "turno": "id"
+      }
+    },
+    "admin.turnos.destroy": {
+      "uri": "admin/turnos/{turno}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "turno": "id"
+      }
+    },
+    "admin.cambiar_turno": {
+      "uri": "admin/cambiar_turno",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.cambiar_aula": {
+      "uri": "admin/cambiar_aula",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.areas.restore": {
+      "uri": "admin/areas/{area}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.areas.index": {
+      "uri": "admin/areas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.areas.create": {
+      "uri": "admin/areas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.areas.store": {
+      "uri": "admin/areas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.areas.show": {
+      "uri": "admin/areas/{area}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "area": "id"
+      }
+    },
+    "admin.areas.edit": {
+      "uri": "admin/areas/{area}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.areas.update": {
+      "uri": "admin/areas/{area}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "area": "id"
+      }
+    },
+    "admin.areas.destroy": {
+      "uri": "admin/areas/{area}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "area": "id"
+      }
+    },
+    "admin.sedes.restore": {
+      "uri": "admin/sedes/{sede}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.sedes.index": {
+      "uri": "admin/sedes",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.sedes.create": {
+      "uri": "admin/sedes/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.sedes.store": {
+      "uri": "admin/sedes",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.sedes.show": {
+      "uri": "admin/sedes/{sede}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "sede": "id"
+      }
+    },
+    "admin.sedes.edit": {
+      "uri": "admin/sedes/{sede}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.sedes.update": {
+      "uri": "admin/sedes/{sede}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "sede": "id"
+      }
+    },
+    "admin.sedes.destroy": {
+      "uri": "admin/sedes/{sede}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "sede": "id"
+      }
+    },
+    "admin.cronogramas.restore": {
+      "uri": "admin/cronogramas/{cronograma}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.cronogramas.index": {
+      "uri": "admin/cronogramas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.cronogramas.create": {
+      "uri": "admin/cronogramas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.cronogramas.store": {
+      "uri": "admin/cronogramas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.cronogramas.show": {
+      "uri": "admin/cronogramas/{cronograma}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "cronograma": "id"
+      }
+    },
+    "admin.cronogramas.edit": {
+      "uri": "admin/cronogramas/{cronograma}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.cronogramas.update": {
+      "uri": "admin/cronogramas/{cronograma}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "cronograma": "id"
+      }
+    },
+    "admin.cronogramas.destroy": {
+      "uri": "admin/cronogramas/{cronograma}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "cronograma": "id"
+      }
+    },
+    "admin.pabellones.restore": {
+      "uri": "admin/pabellones/{pabellon}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.pabellones.index": {
+      "uri": "admin/pabellones",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.pabellones.create": {
+      "uri": "admin/pabellones/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.pabellones.store": {
+      "uri": "admin/pabellones",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.pabellones.show": {
+      "uri": "admin/pabellones/{pabellon}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "pabellon": "id"
+      }
+    },
+    "admin.pabellones.edit": {
+      "uri": "admin/pabellones/{pabellon}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.pabellones.update": {
+      "uri": "admin/pabellones/{pabellon}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "pabellon": "id"
+      }
+    },
+    "admin.pabellones.destroy": {
+      "uri": "admin/pabellones/{pabellon}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "pabellon": "id"
+      }
+    },
+    "admin.perfiles.restore": {
+      "uri": "admin/perfiles/{perfil}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.perfiles.index": {
+      "uri": "admin/perfiles",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.perfiles.create": {
+      "uri": "admin/perfiles/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.perfiles.store": {
+      "uri": "admin/perfiles",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.perfiles.show": {
+      "uri": "admin/perfiles/{perfil}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "perfil": "id"
+      }
+    },
+    "admin.perfiles.edit": {
+      "uri": "admin/perfiles/{perfil}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.perfiles.update": {
+      "uri": "admin/perfiles/{perfil}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "perfil": "id"
+      }
+    },
+    "admin.perfiles.destroy": {
+      "uri": "admin/perfiles/{perfil}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "perfil": "id"
+      }
+    },
+    "admin.aulas.restore": {
+      "uri": "admin/aulas/{aula}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.aulas.index": {
+      "uri": "admin/aulas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.aulas.create": {
+      "uri": "admin/aulas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.aulas.store": {
+      "uri": "admin/aulas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.aulas.show": {
+      "uri": "admin/aulas/{aula}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "aula": "id"
+      }
+    },
+    "admin.aulas.edit": {
+      "uri": "admin/aulas/{aula}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.aulas.update": {
+      "uri": "admin/aulas/{aula}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "aula": "id"
+      }
+    },
+    "admin.aulas.destroy": {
+      "uri": "admin/aulas/{aula}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "aula": "id"
+      }
+    },
+    "admin.procesofaseaulas.restore": {
+      "uri": "admin/procesofaseaulas/{procesofaseaula}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.procesofaseaulas.index": {
+      "uri": "admin/procesofaseaulas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.procesofaseaulas.create": {
+      "uri": "admin/procesofaseaulas/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.procesofaseaulas.store": {
+      "uri": "admin/procesofaseaulas",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.procesofaseaulas.show": {
+      "uri": "admin/procesofaseaulas/{procesofaseaula}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase_aula": "id"
+      }
+    },
+    "admin.procesofaseaulas.edit": {
+      "uri": "admin/procesofaseaulas/{procesofaseaula}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.procesofaseaulas.update": {
+      "uri": "admin/procesofaseaulas/{procesofaseaula}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "proceso_fase_aula": "id"
+      }
+    },
+    "admin.procesofaseaulas.destroy": {
+      "uri": "admin/procesofaseaulas/{procesofaseaula}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "proceso_fase_aula": "id"
+      }
+    },
+    "admin.permissions.restore": {
+      "uri": "admin/permissions/{permission}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.permissions.index": {
+      "uri": "admin/permissions",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.permissions.create": {
+      "uri": "admin/permissions/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.permissions.store": {
+      "uri": "admin/permissions",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.permissions.show": {
+      "uri": "admin/permissions/{permission}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "permission": "id"
+      }
+    },
+    "admin.permissions.edit": {
+      "uri": "admin/permissions/{permission}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.permissions.update": {
+      "uri": "admin/permissions/{permission}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "permission": "id"
+      }
+    },
+    "admin.permissions.destroy": {
+      "uri": "admin/permissions/{permission}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "permission": "id"
+      }
+    },
+    "admin.proceso_escuelas.listar": {
+      "uri": "admin/proceso_escuelas/{proceso}/{tipo_extraordinario?}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_escuelas.especialidades": {
+      "uri": "admin/proceso_escuelas/{nues}/especialidades/{proceso}/{tipo_extraordinario}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_escuelas.bring": {
+      "uri": "admin/proceso_escuelas/bring",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_escuelas.activate_all": {
+      "uri": "admin/proceso_escuelas/activate-all",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_escuelas.deactivate_all": {
+      "uri": "admin/proceso_escuelas/deactivate-all",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_escuelas.change_status": {
+      "uri": "admin/proceso_escuelas/change_status",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_escuelas.destroy": {
+      "uri": "admin/proceso_escuelas/{proceso_id}/{nues}/{tipo_extraordinario_id}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "admin.proceso_escuelas.especialidades.change_status": {
+      "uri": "admin/proceso_escuelas/especialidades/change_status",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_declaraciones.create": {
+      "uri": "admin/proceso_declaraciones/{proceso_fase_id}/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_declaraciones.store": {
+      "uri": "admin/proceso_declaraciones",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.proceso_declaraciones.listar": {
+      "uri": "admin/proceso_declaraciones/{proceso_fase_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_declaraciones.show": {
+      "uri": "admin/proceso_declaraciones/{proceso_fase_id}/{tipo}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.proceso_declaraciones.update": {
+      "uri": "admin/proceso_declaraciones/{proceso_fase_id}/{tipo}",
+      "methods": [
+        "PUT"
+      ]
+    },
+    "admin.proceso_declaraciones.destroy": {
+      "uri": "admin/proceso_declaraciones/{proceso_fase_id}/{tipo}",
+      "methods": [
+        "DELETE"
+      ]
+    },
+    "admin.ubigeos.index": {
+      "uri": "admin/ubigeos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.ubigeos.create": {
+      "uri": "admin/ubigeos/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.ubigeos.store": {
+      "uri": "admin/ubigeos",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.ubigeos.show": {
+      "uri": "admin/ubigeos/{ubigeo}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "ubigeo": "id"
+      }
+    },
+    "admin.ubigeos.edit": {
+      "uri": "admin/ubigeos/{ubigeo}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.ubigeos.update": {
+      "uri": "admin/ubigeos/{ubigeo}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "ubigeo": "id"
+      }
+    },
+    "admin.ubigeos.destroy": {
+      "uri": "admin/ubigeos/{ubigeo}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "ubigeo": "id"
+      }
+    },
+    "admin.ubigeos.create_parents": {
+      "uri": "admin/ubigeos_create_parents",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_solicitudes.restore": {
+      "uri": "admin/tipo_solicitudes/{tipo_solicitud}/restaurar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.tipo_solicitudes.index": {
+      "uri": "admin/tipo_solicitudes",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_solicitudes.create": {
+      "uri": "admin/tipo_solicitudes/create",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_solicitudes.store": {
+      "uri": "admin/tipo_solicitudes",
+      "methods": [
+        "POST"
+      ]
+    },
+    "admin.tipo_solicitudes.show": {
+      "uri": "admin/tipo_solicitudes/{tipo_solicitud}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "tipo_solicitud": "id"
+      }
+    },
+    "admin.tipo_solicitudes.edit": {
+      "uri": "admin/tipo_solicitudes/{tipo_solicitud}/edit",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "admin.tipo_solicitudes.update": {
+      "uri": "admin/tipo_solicitudes/{tipo_solicitud}",
+      "methods": [
+        "PUT",
+        "PATCH"
+      ],
+      "bindings": {
+        "tipo_solicitud": "id"
+      }
+    },
+    "admin.tipo_solicitudes.destroy": {
+      "uri": "admin/tipo_solicitudes/{tipo_solicitud}",
+      "methods": [
+        "DELETE"
+      ],
+      "bindings": {
+        "tipo_solicitud": "id"
+      }
+    },
+    "operador.index": {
+      "uri": "operador/index",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.tablero": {
+      "uri": "operador/tablero",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.revisar": {
+      "uri": "operador/revisar/{atencion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.bandeja": {
+      "uri": "operador/bandeja",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.distribucion_atenciones": {
+      "uri": "operador/distribucion",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.get_personal_asignado": {
+      "uri": "operador/personal-asignado/{proceso_fase_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.count_atenciones_operador": {
+      "uri": "operador/count_atenciones_operador",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.asignar_personal_proceso": {
+      "uri": "operador/asignar-personal",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reasignar_atenciones": {
+      "uri": "operador/reasignar-atenciones",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.editar": {
+      "uri": "operador/editar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.listado.modalidad": {
+      "uri": "operador/listado/modalidad/{proceso_fase_id}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.subir_archivos": {
+      "uri": "operador/subir-archivos/{atencion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.upload_photo_admin": {
+      "uri": "operador/upload-photo-admin",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.upload_document_admin": {
+      "uri": "operador/upload-document-admin",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.actualizar_admin": {
+      "uri": "operador/actualizar-admin",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.validaciones": {
+      "uri": "operador/validaciones",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.asignaciones": {
+      "uri": "operador/asignaciones",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.asignaciones.observadas": {
+      "uri": "operador/asignaciones_observadas",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.asignaciones.update_data": {
+      "uri": "operador/update_inscripcion/{atencion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.confirmar_preinscripcion": {
+      "uri": "operador/confirmar-preinscripcion/{atencion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.observar_preinscripcion": {
+      "uri": "operador/observar-preinscripcion/{atencion}",
+      "methods": [
+        "PUT"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.derivar": {
+      "uri": "operador/derivar/{atencion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.rechazar": {
+      "uri": "operador/rechazar/{atencion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.solicitudes": {
+      "uri": "operador/solicitudes",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.atender_solicitud": {
+      "uri": "operador/atender_solicitud/{solicitud}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "solicitud": "id"
+      }
+    },
+    "operador.respuesta_automatica": {
+      "uri": "operador/respuesta_automatica/{solicitud}",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.descuentos.show": {
+      "uri": "operador/descuentos/show",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.descuentos.search_postulante": {
+      "uri": "operador/descuentos/search_postulante",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.descuentos.mostrar_recibo": {
+      "uri": "operador/descuentos/mostrar_recibo/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "operador.descuentos.mostrar_recibo_reintegro": {
+      "uri": "operador/descuentos/mostrar_recibo_reintegro/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "operador.descuentos.mostrar_retiro": {
+      "uri": "operador/descuentos/mostrar_retiro/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "operador.descuentos.mostrar_rectificacion": {
+      "uri": "operador/descuentos/mostrar_rectificacion/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "operador.descuentos.aplicar": {
+      "uri": "operador/descuentos/aplicar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.descuentos.aplicar_reintegro": {
+      "uri": "operador/descuentos/aplicar_reintegro",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.descuentos.aplicar_retiro": {
+      "uri": "operador/descuentos/aplicar_retiro",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.descuentos.aplicar_rectificacion": {
+      "uri": "operador/descuentos/aplicar_rectificacion",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.deudas.show": {
+      "uri": "operador/deudas/show",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.deudas.search_postulante": {
+      "uri": "operador/deudas/search_postulante",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.deudas.mostrar_recibo": {
+      "uri": "operador/deudas/mostrar_recibo/{deuda}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.deudas.aplicar": {
+      "uri": "operador/deudas/aplicar",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.deudas.subir_deudas_admin": {
+      "uri": "operador/deudas/subir_deudas_admin",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.viewbusqueda": {
+      "uri": "operador/reportes/viewbusqueda",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewatendidos": {
+      "uri": "operador/reportes/viewatendidos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewatendidoshoras": {
+      "uri": "operador/reportes/viewatendidoshoras",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewpreinscritos": {
+      "uri": "operador/reportes/viewpreinscritos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewinscritos": {
+      "uri": "operador/reportes/viewinscritos",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewingresantes": {
+      "uri": "operador/reportes/viewingresantes",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewgenerales": {
+      "uri": "operador/reportes/viewgenerales",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewgeneralesdua": {
+      "uri": "operador/reportes/viewgeneralesdua",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewregistrados": {
+      "uri": "operador/reportes/viewregistrados",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewpostulantes": {
+      "uri": "operador/reportes/viewpostulantes",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.viewdetalles": {
+      "uri": "operador/reportes/viewdetalles",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "operador.reportes.inscritos": {
+      "uri": "operador/reportes/inscritos/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.inscritos-dua": {
+      "uri": "operador/reportes/inscritos-dua/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.inscritos-general": {
+      "uri": "operador/reportes/inscritos-general/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.inscritos-reducido": {
+      "uri": "operador/reportes/inscritos-reducido/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.general-sunedu": {
+      "uri": "operador/reportes/general-sunedu/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.preinscritos": {
+      "uri": "operador/reportes/preinscritos/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.preinscritos-sin-suficiencia": {
+      "uri": "operador/reportes/preinscritos-sin-suficiencia/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.inscritos-suficiencia": {
+      "uri": "operador/reportes/inscritos-suficiencia",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.inscritos-suficiencia-nuevo": {
+      "uri": "operador/reportes/inscritos-suficiencia-nuevo/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.preinscritos-suficiencia": {
+      "uri": "operador/reportes/preinscritos-suficiencia",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.aceptado-no-pagado-suficiencia": {
+      "uri": "operador/reportes/aceptado-no-pagado-suficiencia",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.aceptado-no-pagado-sin-suficiencia": {
+      "uri": "operador/reportes/aceptado-no-pagado-sin-suficiencia",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.observado-suficiencia": {
+      "uri": "operador/reportes/observado-suficiencia",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.aceptado-no-pagado": {
+      "uri": "operador/reportes/aceptado-no-pagado",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.asignacion-correos": {
+      "uri": "operador/reportes/asignacion-correos/{proceso_fase}/{permiso}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.revisar": {
+      "uri": "operador/reportes/revisar/{atencion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "operador.reportes.inscritos-ceprunsa": {
+      "uri": "operador/reportes/inscritos-ceprunsa/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.inscritos-ceprunsa-general": {
+      "uri": "operador/reportes/inscritos-ceprunsa-general/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.correos-ceprunsa": {
+      "uri": "operador/reportes/correos-ceprunsa/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.ingresantes": {
+      "uri": "operador/reportes/ingresantes/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.documentacion-postulantes": {
+      "uri": "operador/reportes/documentacion-postulantes/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.documentacion-faltante": {
+      "uri": "operador/reportes/documentacion-faltante/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.primeros-puestos": {
+      "uri": "operador/reportes/primeros-puestos/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.extr-ceprunsa": {
+      "uri": "operador/reportes/extr-ceprunsa/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.atencion-pendientes": {
+      "uri": "operador/reportes/atencion-pendientes/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.atencion-hoy": {
+      "uri": "operador/reportes/atencion-hoy/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.pagos-pendientes": {
+      "uri": "operador/reportes/pagos-pendientes/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.pagos-pendientes-puntaje": {
+      "uri": "operador/reportes/pagos-pendientes-puntaje/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.cambios-carreras": {
+      "uri": "operador/reportes/cambios-carreras/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.anho-egreso": {
+      "uri": "operador/reportes/anho-egreso/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.matricula-extraordinario": {
+      "uri": "operador/reportes/matricula-extraordinario",
+      "methods": [
+        "POST"
+      ]
+    },
+    "operador.reportes.retirados": {
+      "uri": "operador/reportes/retirados/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.ceprunsa-sin-turno": {
+      "uri": "operador/reportes/ceprunsa-sin-turno/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.alumnos_unsa": {
+      "uri": "operador/reportes/alumnos_unsa/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.nodieron_examen": {
+      "uri": "operador/reportes/nodieron_examen/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.reportes.traslados_internos": {
+      "uri": "operador/reportes/traslados_internos/{proceso_fase}/{permiso}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "proceso_fase": "id"
+      }
+    },
+    "operador.inscripciones.change_photo": {
+      "uri": "operador/inscripciones/{inscripcion}/change-photo",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.busquedageneral": {
+      "uri": "supervision/busqueda-general",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "supervision.busqueda.search": {
+      "uri": "supervision/busqueda/search",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "supervision.revisar": {
+      "uri": "supervision/revisar/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.historial": {
+      "uri": "supervision/historial/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.cambiar_docs": {
+      "uri": "supervision/cambiar_docs/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.detalle": {
+      "uri": "supervision/detalle/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.eliminar_registrado": {
+      "uri": "supervision/eliminar_registrado/{user}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "user": "id"
+      }
+    },
+    "supervision.eliminar_postulante": {
+      "uri": "supervision/eliminar_postulante/{user}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "user": "id"
+      }
+    },
+    "supervision.update_correo": {
+      "uri": "supervision/update_correo/{atencion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "supervision.update_colegio": {
+      "uri": "supervision/update_colegio/{atencion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "supervision.update_programa": {
+      "uri": "supervision/update_programa/{inscripcion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.eliminar_incripcion": {
+      "uri": "supervision/eliminar_incripcion/{inscripcion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.eliminacion_total": {
+      "uri": "supervision/eliminacion_total/{inscripcion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.mostrar_recibo_supervision": {
+      "uri": "supervision/mostrar_recibo_supervision/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.derivar": {
+      "uri": "supervision/derivar/{atencion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "atencion": "id"
+      }
+    },
+    "supervision.regularizacion.busqueda": {
+      "uri": "supervision/regularizacion/busqueda",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "supervision.generarpdfdetalle": {
+      "uri": "supervision/generarpdfdetalle/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.busqueda_examen": {
+      "uri": "supervision/busqueda/examen",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "supervision.search_examen": {
+      "uri": "supervision/search",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "supervision.mostrar_detalle_evaluacion": {
+      "uri": "supervision/mostrar_detalle_evaluacion/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.actualizar_admin": {
+      "uri": "supervision/actualizar-admin",
+      "methods": [
+        "POST"
+      ]
+    },
+    "supervision.generarpdfcarnetadmin": {
+      "uri": "supervision/generarpdfcarnetadmin/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.generarpdfinscripcionadmin": {
+      "uri": "supervision/generarpdfinscripcionadmin/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.generarpdfpreinscripcionadmin": {
+      "uri": "supervision/generarpdfpreinscripcionadmin/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.revisar_usuario_postulante": {
+      "uri": "supervision/revisar_usuario_postulante/{usuario}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "supervision.update_usuario_postulante": {
+      "uri": "supervision/revisar_usuario_postulante/update",
+      "methods": [
+        "POST"
+      ]
+    },
+    "supervision.cambio_carrera_form": {
+      "uri": "supervision/cambio_carrera/{inscripcion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "supervision.reset_password": {
+      "uri": "supervision/reset_password/{user}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "user": "id"
+      }
+    },
+    "supervision.establecer_cambio_programa": {
+      "uri": "supervision/establecer_cambio_programa/{inscripcion}",
+      "methods": [
+        "POST"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "regularizacion.busqueda": {
+      "uri": "regularizacion/busqueda",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "regularizacion.search": {
+      "uri": "regularizacion/search",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "regularizacion.revisar": {
+      "uri": "regularizacion/revisar/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "regularizacion.revisar_usuario_postulante": {
+      "uri": "regularizacion/revisar_usuario_postulante/{inscripcion}",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "bindings": {
+        "inscripcion": "id"
+      }
+    },
+    "regularizacion.update_usuario_postulante": {
+      "uri": "regularizacion/update_usuario_postulante/update",
+      "methods": [
+        "POST"
+      ]
+    },
+    "import_ingresantes": {
+      "uri": "import/ingresantes-data",
+      "methods": [
+        "POST"
+      ]
+    },
+    "google": {
+      "uri": "google",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "SendTestEmail": {
+      "uri": "testing_send_email",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "usuarios.get_email": {
+      "uri": "usuarios/get_email",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "email.change": {
+      "uri": "forgot-email",
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    "postulante.email.update": {
+      "uri": "postulante-update-email",
+      "methods": [
+        "PUT"
+      ]
+    },
+    "user.email.update": {
+      "uri": "user-update-email",
+      "methods": [
+        "PUT"
+      ]
+    }
+  }
+}
